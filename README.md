@@ -1,6 +1,6 @@
 # Get Started
 ## 事前に必要なこと
-- [node のインストール](https://qiita.com/sefoo0104/items/0653c935ea4a4db9dc2b)
+- [node のインストール](https://nodejs.org/en)
 
 設定はデフォルトでOK
 
