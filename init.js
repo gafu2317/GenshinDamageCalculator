@@ -1,7 +1,7 @@
 //インスタンス化するためのファイル
 import { Character } from "./class";
 import { Enemy } from "./class";
-import { ElementalColor } from "./class";
+
 
 export const characters = [
   Nuvillette = new Character(

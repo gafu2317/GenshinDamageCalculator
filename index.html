@@ -3,101 +3,153 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css" />
     <title>Genshinダメージ計算機</title>
   </head>
   <body>
     <div id="app"></div>
-    <div id="NameBox">
-      <div id="Name">ヌヴィレット</div>
-    </div>
-    <div id="ImageBox">
-      <img src="public/nuvillette.webp" alt="キャラ画像" id="ヌヴィレット">
-    </div>
 
-    <div class="TenpuBox">
-      <div id="NomalTenpu">Lv8</div>
-    </div>
-    <div class="TenpuBox">
-      <div id="SkillTenpu">Lv8</div>
-    </div>
-    <div class="TenpuBox">
-      <div id="UltTenpu">Lv8</div>
-    </div>
-
-    <div class="nCBox">
-      <div id="1C">凸</div>
-    </div>
-    <div class="nCBox">
-      <div id="2C">凸</div>
-    </div>
-    <div class="nCBox">
-      <div id="3C">凸</div>
-    </div>
-    <div class="nCBox">
-      <div id="4C">凸</div>
-    </div>
-    <div class="nCBox">
-      <div id="5C">凸</div>
-    </div>
-    <div class="nCBox">
-      <div id="6C">凸</div>
+    <div id="CharacterInfo">
+      <div id="NameBox">
+        <div id="Name">ヌヴィレット</div>
+      </div>
+      <div id="ImageBox">
+        <img
+          src="public/nuvillette.webp"
+          alt="キャラ画像"
+          id="CharactorImage"
+        />
+      </div>
+      <div id="TempuTeam">
+        <div class="TempuBox" id="NomalTempuBox">
+          <div id="NomalTempu">NLv8</div>
+        </div>
+        <div class="TempuBox" id="SkillTempuBox">
+          <div id="SkillTempu">SLv8</div>
+        </div>
+        <div class="TempuBox" id="UltTempuBox">
+          <div id="UltTempu">ULv8</div>
+        </div>
+      </div>
+      <div class="CnBox" id="C1Box">
+        <div id="1C">凸</div>
+      </div>
+      <div class="CnBox" id="C2Box">
+        <div id="2C">凸</div>
+      </div>
+      <div class="CnBox" id="C3Box">
+        <div id="3C">凸</div>
+      </div>
+      <div class="CnBox" id="C4Box">
+        <div id="4C">凸</div>
+      </div>
+      <div class="CnBox" id="C5Box">
+        <div id="5C">凸</div>
+      </div>
+      <div class="CnBox" id="C6Box">
+        <div id="6C">凸</div>
+      </div>
     </div>
 
     <div id="WeaponBox">
-      <img src="" alt="">
-      <div>武器名</div>
-      <div>凸</div>
-      <div>Lv</div>
-      <div>基礎攻撃力</div>
-      <div>サブステ</div>
+      <img src="/public/kimpaku.jpeg" alt="武器の画像" id="WeaponImage" />
+      <div id="WeaponC">凸</div>
+      <div id="WeaponName">武器名</div>
+      <div id="WeaponLevel">Lv</div>
+      <div id="WeaponAtk">基礎攻撃力</div>
+      <div id="WeaponSub">サブステ</div>
     </div>
-    
+
     <div id="BuffBox">
       <div>バフ選択</div>
     </div>
-    
-        <div id="RelicBuffBox">
-          <div>聖遺物セット効果 </div>
-        </div>
 
-        <div class="RelicBox">
-          <div id=flower>聖遺物</div>
-        </div>
-        <div class="RelicBox">
-          <div id="fether">聖遺物</div>
-        </div>
-        <div class="RelicBox">
-          <div id="clock">聖遺物</div>
-        </div>
-        <div class="RelicBox">
-          <div id="cup">聖遺物</div>
-        </div>
-        <div class="RelicBox">
-          <div id="crown">聖遺物</div>
-        </div>
+    <div id="RelicBuffBox">
+      <div>聖遺物セット効果</div>
+    </div>
 
-        
-        
+    <div id="RelicTeam">
+      <div class="RelicBox" id="Relic1Box">
+        <div id="flower">聖遺物</div>
+      </div>
+      <div class="RelicBox" id="Relic2Box">
+        <div id="fether">聖遺物</div>
+      </div>
+      <div class="RelicBox" id="Relic3Box">
+        <div id="clock">聖遺物</div>
+      </div>
+      <div class="RelicBox" id="Relic4Box">
+        <div id="cup">聖遺物</div>
+      </div>
+      <div class="RelicBox" id="Relic5Box">
+        <div id="crown">聖遺物</div>
+      </div>
+    </div>
     <div id="StatusBox">
-      <div>HP</div>
-      <div>攻撃力</div>
-      <div>防御力</div>
-      <div>元素熟知</div>
-      <div>会心率</div>
-      <div>会心ダメージ</div>
-      <div>元チャ</div>
-      <div>元素ダメージ</div>
-      <div>ダメバフ</div>      
-    </div>
-    <div id="EnemyImageBox">
-      <img src="public/masshu_raputoru.webp" alt="仮想敵画像" id="マッシュラプトル">
+      <div class="HP">
+        <div>HP</div>
+        <div>(+0)</div>
+      </div>
+      <div class="ATK">
+        <div>攻撃力</div>
+        <div>(+0)</div>
+      </div>
+      <div class="DEF">
+        <div>防御力</div>
+        <div>(+0)</div>
+      </div>
+      <div class="ELM">
+        <div>元素熟知</div>
+        <div>(+0)</div>
+      </div>
+      <div class="CRate">
+        <div>会心率</div>
+        <div>(+0)</div>
+      </div>
+      <div class="CDamage">
+        <div>会心ダメージ</div>
+        <div>(+0)</div>
+      </div>
+      <div class="ET">
+        <div>元チャ</div>
+        <div>(+0)</div>
+      </div>
+      <div class="EDamage">
+        <div>元素ダメバフ</div>
+        <div>(+0)</div>
+      </div>
+      <div class="PDamage">
+        <div>物理ダメバフ 100%</div>
+        <div>(+100%)</div>
+      </div>
     </div>
 
+    <div id="EnemyImageBox">
+      <img src="public/masshu_raputoru.webp" alt="仮想敵画像" id="EnemyImage" />
+      <div id="EnemyName">マッシュラプトル</div>
+      <div id="EnemyDef">ダメージ耐性</div>
+      <div id="EnemyDefValueBox">
+        <div id="EnemyDefValue">
+          <div class="raw1">
+            <div class="ElementDef">炎 0%</div>
+            <div class="ElementDef">水 0%</div>
+            <div class="ElementDef">草 0%</div>
+            <div class="ElementDef">雷 100%</div>
+          </div>
+          <div class="raw2">
+            <div class="ElementDef">氷 0%</div>
+            <div class="ElementDef">風 0%</div>
+            <div class="ElementDef">岩 0%</div>
+            <div class="ElementDef">物理 100%</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="DamageBox">
       <div>ダメージ</div>
     </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

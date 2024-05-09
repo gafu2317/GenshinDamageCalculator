@@ -1,70 +1,307 @@
+#CharacterInfo {
+  position: relative;
+}
+#NameBox,
+#ImageBox,
+.TempuBox,
+#NomalTempuBox,
+#SkillTempuBox,
+#UltTempuBox,
+.CnBox,
+#C1Box,
+#C2Box,
+#C3Box,
+#C4Box,
+#C5Box,
+#C6Box,
+#CharactorImage,
+#TempuTeam {
+  position: absolute;
+}
 #NameBox {
-  width: 224px;
-  height: 60px;
+  width: 150px;
+  height: 40px;
   border-radius: 10px;
-  background-color: rgb(156, 171, 199);
+  background-color: rgb(150, 150, 150);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 30px;
+  top: 30px;
+  z-index: 100;
+}
+#Name {
+  font-size: 15px;
+}
+#ImageBox {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 20px;
+  top: 20px;
+  z-index: -10;
+}
+#CharactorImage {
+  width: 500px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#Name {
-  font-size: 20px;
+.TempuBox {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(150, 150, 150);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  top: 450px;
 }
-#ImageBox {
+#NomalTempuBox {
+  left: 30px;
 }
-#ヌヴィレット {
-  width: 100%;
-  height: 100%;
-  margin: 40px 10px 0px 0px;
+#SkillTempuBox {
+  left: 100px;
 }
-#マッシュラプトル {
-  width: 100%;
-  height: 100%;
+#UltTempuBox {
+  left: 170px;
+}
+
+.CnBox {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 530px;
+  left: 30px;
+}
+#C1Box {
+  left: 35px;
+}
+#C2Box {
+  left: 115px;
+}
+#C3Box {
+  left: 195px;
+}
+#C4Box {
+  left: 275px;
+}
+#C5Box {
+  left: 355px;
+}
+#C6Box {
+  left: 435px;
+}
+
+#WeaponBox {
+  position: relative;
+  width: 250px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: rgb(200, 200, 200);
+  left: 540px;
+  top: 20px;
+}
+#WeaponImage,
+#WeaponName,
+#WeaponC,
+#WeaponLevel,
+#WeaponAtk,
+#WeaponSub {
+  position: absolute;
+}
+#WeaponImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  top: 10px;
+  left: 10px;
+}
+#WeaponC {
+  font-size: 15px;
+  top: 20px;
+  left: 20px;
+}
+#WeaponName {
+  font-size: 13px;
+  top: 10px;
+  left: 120px;
+}
+#WeaponLevel {
+  font-size: 13px;
+  top: 35px;
+  left: 120px;
+}
+#WeaponAtk {
+  font-size: 13px;
+  top: 60px;
+  left: 120px;
+}
+#WeaponSub {
+  font-size: 13px;
+  top: 85px;
+  left: 120px;
+}
+
+#BuffBox {
+  position: relative;
+  width: 250px;
+  height: 280px;
+  border-radius: 10px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 540px;
+  top: 40px;
+}
+
+#RelicBuffBox {
+  position: relative;
+  width: 250px;
+  height: 130px;
+  border-radius: 10px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 540px;
+  top: 60px;
+}
+
+#RelicTeam {
+  position: relative;
+}
+
+.RelicBox,
+#Relic1Box,
+#Relic2Box,
+#Relic3Box,
+#Relic4Box,
+#Relic5Box,
+#flower,
+#fether,
+#clock,
+#cup,
+#crown {
+  position: absolute;
+}
+
+.RelicBox {
+  width: 200px;
+  height: 220px;
+  border-radius: 10px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 80px;
+}
+
+#Relic1Box {
+  left: 20px;
+}
+#Relic2Box {
+  left: 240px;
+}
+#Relic3Box {
+  left: 460px;
+}
+#Relic4Box {
+  left: 680px;
+}
+#Relic5Box {
+  left: 900px;
 }
 
 #StatusBox {
-  width: 400px;
-  height: 600px;
+  position: relative;
+  width: 270px;
+  height: 550px;
   border-radius: 10px;
-  background-color: lightgray;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  position: absolute;
-  left: 600px;
+  background-color: rgb(200, 200, 200);
+  top: -510px;
+  left: 810px;
+  font-size: 20px;
+  padding: 10px;
 }
+.HP,
+.ATK,
+.DEF,
+.ELM,
+.CRate,
+.CDamage,
+.ET,
+.EDamage,
+.PDamage {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
 #EnemyImageBox {
-  width: 300px;
-  height: 300px;
+  position: relative;
+  width: 350px;
+  height: 200px;
   border-radius: 10px;
-  background-color: rgb(253, 247, 247);
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 1000px;
-  font-size: 30px;
+  background-color: rgb(200, 200, 200);
+  left: 1120px;
+  top: -1080px;
 }
-#EnemyStatusBox {
-  width: 300px;
-  height: 300px;
-  border-radius: 10px;
-  background-color: rgb(253, 247, 247);
-  justify-content: center;
-  align-items: center;
+#EnemyImage,
+#EnemyDef,
+#EnemyName {
   position: absolute;
-  left: 1300px;
-  font-size: 30px;
 }
-#DamageBox {
-  width: 600px;
-  height: 330px;
-  border-radius: 10px;
-  background-color: rgb(253, 247, 247);
+#EnemyImage {
+  width: 200px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 400px;
-  left: 1000px;
-  font-size: 30px;
+}
+#EnemyName {
+  font-size: 15px;
+  top: 20px;
+  left: 200px;
+}
+#EnemyDef {
+  font-size: 15px;
+  top: 60px;
+  left: 200px;
+}
+#EnemyDefValueBox {
+  width: 140px;
+  height: 100px;
+}
+#EnemyDefValue {
+  position: relative;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  top: 100px;
+  left: 200px;
+  font-size: 13px;
+}
+#DamageBox {
+  position: relative;
+  width: 350px;
+  height: 590px;
+  border-radius: 10px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 1120px;
+  top: -1060px;
 }
