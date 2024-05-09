@@ -1,6 +1,7 @@
 //インスタンス化するためのファイル
-import { Character } from "./class";
-import { Enemy } from "./class";
+import { Character } from "./characterClass";
+import { Enemy } from "./characterClass";
+
 
 
 export const characters = [
