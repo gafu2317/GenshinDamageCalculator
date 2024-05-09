@@ -1,31 +1,62 @@
 //classを定義するファイル
 //キャラクタのステータスを定義するクラス
 export class Character {
-  //名前、画像パス、HP、攻撃力、防御力、元素熟知、会心率、会心ダメージ、元素チャージ、元素ダメージバフ、ダメージバフを引数に取る
+  //名前、画像パス、基礎HP、基礎攻撃力、攻撃力％、基礎防御力、防御力％元素熟知、会心率、会心ダメージ、元素チャージ、元素ダメージバフ、ダメージバフを引数に取る
   constructor(
-    name,
-    imgPath,
-    hp,
-    atk,
-    def,
-    elementalMastery,
-    crtRate,
-    crtDmg,
-    energyCharge,
-    elementalDmgBuff,
-    DmgBuff
+    name,//名前
+    imgPath,//画像パス
+    hp,//基礎HP 
+    atk,//基礎攻撃力
+    def,//基礎防御力
+    hpPer,//HP%
+    atkPer,//攻撃％
+    defPer,//防御％
+    elementalMastery,//元素熟知
+    crtRate,//会心率
+    crtDmg,//会心ダメージ
+    energyCharge,//元素チャージ効率
+    elementalDmgBuff,//元素ダメージバフ
+    physicalDmgBuff,//物理ダメージバフ
+   
+
+    //
+    //三重配列の構造
+    //一回目の分岐、（通常攻撃、特殊通常攻撃（倍率変化や元素変化））
+    //二回目の分岐、（倍率の入る配列、名前の入る配列）
+    //倍率配列の最初の値はどのスキルとして扱うか、二つ目の値はどの元素ダメージとして扱うのか情報としてだす
+    //
+
+
+    //1通常、2特殊通常,3重撃、4特殊重撃、5落下、6特殊落下が入った三重配列
+    NomalTempu,
+
+    //スキル、特殊スキルの倍率が入った三重配列
+    SkillTempu,
+    //爆発、特殊爆発の倍率が入った三重配列
+    UltTempu,
+
+    
+
+    
+    
   ) {
     this.name = name;
     this.imgPath = imgPath;
     this.hp = hp;
     this.atk = atk;
     this.def = def;
+    this.hpPer = hpPer;
+    this.atkPer = atkPer;
+    this.defPer = defPer;
     this.elementalMastery = elementalMastery;
     this.crtRate = crtRate;
     this.crtDmg = crtDmg;
     this.energyCharge = energyCharge;
     this.elementalDmgBuff = elementalDmgBuff;
-    this.DmgBuff = DmgBuff;
+    this.physicalDmgBuff = physicalDmgBuff;
+    this.NomalTempu = NomalTempu;
+    this.SkillTempu = SkillTempu;
+    this.UltTempu = UltTempu;
   }
 
   //メソッド
@@ -45,6 +76,16 @@ export class Character {
   getDef() {
     return this.def;
   }
+  getHpPer() {
+    return this.hpPer;
+  }
+  getAtkPer() {
+    return this.atkPer;
+  }
+  getDefPer() {
+    return this.defPer;
+  }
+
   getElementalMastery() {
     return this.elementalMastery;
   }
@@ -60,8 +101,15 @@ export class Character {
   getElementalDmgBuff() {
     return this.elementalDmgBuff;
   }
-  getDmgBuff() {
-    return this.DmgBuff;
+  getNomalTempu() {
+    return this.NomalTempu
+    ;
+  }
+  getDef() {
+    return this.def;
+  }
+  getDef() {
+    return this.def;
   }
   //セッター
   setName(name) {
@@ -79,6 +127,16 @@ export class Character {
   setDef(def) {
     this.def = def;
   }
+  setHpPer(hpPer) {
+    this.hpPer = hpPer;
+  }
+  setAtkPer(atkPer) {
+    this.atkPer = atkPer;
+  }
+  setDefPer(defPer) {
+    this.defPer = defPer;
+  }
+
   setElementalMastery(elementalMastery) {
     this.elementalMastery = elementalMastery;
   }
@@ -94,115 +152,7 @@ export class Character {
   setElementalDmgBuff(elementalDmgBuff) {
     this.elementalDmgBuff = elementalDmgBuff;
   }
-  setDmgBuff(DmgBuff) {
-    this.DmgBuff = DmgBuff;
-  }
-}
 
-//敵のステータスを定義するクラス
-export class Enemy {
-  constructor(
-    name,
-    imgPath,
-    def,
-    level,
-    PhysicsR,
-    PyroR,
-    HydroR,
-    DendroR,
-    ElectroR,
-    AnemoR,
-    CryoR,
-    GeoR
-  ) {
-    this.name = name;
-    this.imgPath = imgPath;
-    this.def = def;
-    this.level = level;
-    this.PhysicsR = PhysicsR;
-    this.PyroR = PyroR;
-    this.HydroR = HydroR;
-    this.DendroR = DendroR;
-    this.ElectroR = ElectroR;
-    this.AnemoR = AnemoR;
-    this.CryoR = CryoR;
-    this.GeoR = GeoR;
-  }
-  //メソッド
-  //ゲッター
-  getName() {
-    return this.name;
-  }
-  getImgPath() {
-    return this.imgPath;
-  }
-  getDef() {
-    return this.def;
-  }
-  getLevel() {
-    return this.level;
-  }
-  getPhysicsR() {
-    return this.PhysicsR;
-  }
-  getPyroR() {
-    return this.PyroR;
-  }
-  getHydroR() {
-    return this.HydroR;
-  }
-  getDendroR() {
-    return this.DendroR;
-  }
-  getElectroR() {
-    return this.ElectroR;
-  }
-  getAnemoR() {
-    return this.AnemoR;
-  }
-  getCryoR() {
-    return this.CryoR;
-  }
-  getGeoR() {
-    return this.GeoR;
-  }
-  //セッター
-  setName(name) {
-    this.name = name;
-  }
-  setImgPath(imgPath) {
-    this.imgPath = imgPath;
-  }
-  setDef(def) {
-    this.def = def;
-  }
-  setLevel(level) {
-    this.level = level;
-  }
-  setPhysicsR(PhysicsR) {
-    this.PhysicsR = PhysicsR;
-  }
-  setPyroR(PyroR) {
-    this.PyroR = PyroR;
-  }
-  setHydroR(HydroR) {
-    this.HydroR = HydroR;
-  }
-  setDendroR(DendroR) {
-    this.DendroR = DendroR;
-  }
-  setElectroR(ElectroR) {
-    this.ElectroR = ElectroR;
-  }
-  setAnemoR(AnemoR) {
-    this.AnemoR = AnemoR;
-  }
-  setCryoR(CryoR) {
-    this.CryoR = CryoR;
-  }
-  setGeoR(GeoR) {
-    this.GeoR = GeoR;
-  }
 }
 
 export class ElementalColor {
